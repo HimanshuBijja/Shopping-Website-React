@@ -34,7 +34,7 @@
       opacity: 1;
     }
     50% {
-      opacity: 0.8;
+      opacity: 0;
     }
   }
   @keyframes fade-in {
@@ -71,7 +71,7 @@
 
     --primary: 250 47% 60%;
     --primary-foreground: 210 40% 98%;
-
+ 
     --border: 214 32% 91%;
   }
 
