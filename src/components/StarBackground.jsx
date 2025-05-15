@@ -7,11 +7,11 @@ const useBackground = () => {
   useEffect(() => {
     generateStars();
     generateMeteors();
-    // window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize);
 
-    // return()=>{
-    //   window.removeEventListener('resize', handleResize);
-    // }
+    return()=>{
+      window.removeEventListener('resize', handleResize);
+    }
   }, []);
 
   const handleResize = ()=>{
@@ -61,7 +61,7 @@ export const StarBackground = () => {
   const { stars, meteors } = useBackground();
 
   return (
-    <div>
+    <div className="fixed inset-0 overflow-hidden pointer-events-none ">
       {stars.map((star) => (
         <div
           key={star.id}
