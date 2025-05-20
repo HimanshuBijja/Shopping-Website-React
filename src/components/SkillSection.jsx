@@ -41,7 +41,7 @@ export function SkillSection() {
                     My <span className=" text-primary"> Skills</span>
                 </h2>
 
-                <div className="flex flex-wrap justify-center gap-4 mb-12">
+                <div className="flex flex-wrap justify-center gap-4 mb-12 transition-all duration-300">
                     {categories.map((category, index) => (
                         <RenderCategory
                             key={index}
@@ -56,7 +56,7 @@ export function SkillSection() {
                     {filterSkills.map((skill, index) => (
                         <div
                             key={index}
-                            className="bg-card p-6 rounded-lg shadow-xs card-hover"
+                            className="bg-card p-6 rounded-lg shadow-xs card-hover transition-all duration-300"
                         >
                             <div className="text-left mb-4">
                                 <h3 className="font-semibold text-lg">
@@ -87,7 +87,7 @@ function RenderCategory({ category, activeCategory, setActiveCategory }) {
         <button
             onClick={() => setActiveCategory(category)}
             className={cn(
-                "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
+                "px-5 py-2 rounded-full transition-all duration-300 capitalize",
                 activeCategory === category
                     ? "bg-primary text-primary-foreground"
                     : "bg-secondary/70 text-foreground hover:bg-secondaryy"
