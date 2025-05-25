@@ -1,5 +1,6 @@
 import { AboutSection } from "../components/AboutSection";
 import { NavBar } from "../components/NavBar";
+import { ProjectsSection } from "../components/ProjectSection";
 import { SkillSection } from "../components/SkillSection";
 import { StarBackground } from "../components/StarBackground";
 import { ThemeToggle } from "../components/ThemeToggle";
@@ -15,6 +16,7 @@ export function Home(){
                 <HeroSection/>
                 <AboutSection/>
                 <SkillSection/>
+                <ProjectsSection/>
             </main>
             
         </div>
