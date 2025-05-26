@@ -10,10 +10,10 @@ export function ThemeToggle() {
   useEffect(() => {
     if (darkMode) {
       localStorage.setItem("theme", "light");
-      document.documentElement.classList.add("light");
+      document.documentElement.classList.remove("dark");
     } else {
       localStorage.setItem("theme", "dark");
-      document.documentElement.classList.remove("light");
+      document.documentElement.classList.add("dark");
     }
   }, [darkMode]);
 
@@ -28,7 +28,7 @@ export function ThemeToggle() {
         setDarkMode((x) => !x);
       }}
     >
-      {!darkMode ? (
+      {darkMode ? (
         <Sun className=" size-6 text-yellow-300" />
       ) : (
         <Moon className=" size-6 text-blue-900" />
