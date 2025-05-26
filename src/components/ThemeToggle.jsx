@@ -4,16 +4,16 @@ import { cn } from "../lib/utils";
 
 export function ThemeToggle() {
   const [darkMode, setDarkMode] = useState(() => {
-    return localStorage.getItem("theme") === "dark";
+    return localStorage.getItem("theme") === "light";
   });
 
   useEffect(() => {
     if (darkMode) {
-      localStorage.setItem("theme", "dark");
-      document.documentElement.classList.add("dark");
-    } else {
       localStorage.setItem("theme", "light");
-      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.add("light");
+    } else {
+      localStorage.setItem("theme", "dark");
+      document.documentElement.classList.remove("light");
     }
   }, [darkMode]);
 
