@@ -16,7 +16,7 @@ export function Home(){
                 <HeroSection/>
                 <AboutSection/>
                 <SkillSection/>
-                <ProjectsSection/>
+                {/* <ProjectsSection/> */}
             </main>
             
         </div>
